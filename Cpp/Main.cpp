@@ -33,10 +33,6 @@ KartuAkses inputKartu() {
     return KartuAkses(id, level);
 }
 
-void tampilkanKartu(EntitasKampus &e) {
-    cout << "  ID Kartu     : " << e.getKartu().getIdKartu() << endl;
-    cout << "  Level Akses  : " << e.getKartu().getLevelAkses() << endl;
-}
 
 void tambahMahasiswa(vector<Mahasiswa> &daftar) {
     cout << "\n--- Tambah Mahasiswa ---\n";
@@ -77,37 +73,43 @@ void tambahPetugas(vector<PetugasKebersihan> &daftar) {
     cout << "Data petugas berhasil ditambahkan.\n";
 }
 
+void tampilkanKartu(EntitasKampus &e) {
+    cout << "   ID Kartu     : " << e.getKartu().getIdKartu() << endl;
+    cout << "   Level Akses  : " << e.getKartu().getLevelAkses() << endl;
+    cout << "\n";
+}
+
 void tampilkanSemua(vector<Mahasiswa> &mhs, vector<Dosen> &dsn, vector<PetugasKebersihan> &ptg) {
-    cout << "\n=== Daftar Mahasiswa (" << mhs.size() << ") ===\n";
+    cout << "=== Daftar Mahasiswa (" << mhs.size() << ") ===\n";
     for (size_t i = 0; i < mhs.size(); i++) {
-        cout << i + 1 << ".\n";
-        cout << "  ID Entitas   : " << mhs[i].getIdEntitas() << endl;
-        cout << "  Nama         : " << mhs[i].getNama() << endl;
-        cout << "  Prodi        : " << mhs[i].getProdi() << endl;
-        cout << "  NIM          : " << mhs[i].getNim() << endl;
-        cout << "  IPK          : " << mhs[i].getIpk() << endl;
+        cout << i + 1 << "."; 
+        cout << " ID Entitas   : " << mhs[i].getIdEntitas() << endl;
+        cout << "   Nama         : " << mhs[i].getNama() << endl;
+        cout << "   Prodi        : " << mhs[i].getProdi() << endl;
+        cout << "   NIM          : " << mhs[i].getNim() << endl;
+        cout << "   IPK          : " << mhs[i].getIpk() << endl;
         tampilkanKartu(mhs[i]);
     }
 
-    cout << "\n=== Daftar Dosen (" << dsn.size() << ") ===\n";
+    cout << "=== Daftar Dosen (" << dsn.size() << ") ===\n";
     for (size_t i = 0; i < dsn.size(); i++) {
-        cout << i + 1 << ".\n";
-        cout << "  ID Entitas   : " << dsn[i].getIdEntitas() << endl;
-        cout << "  Nama         : " << dsn[i].getNama() << endl;
-        cout << "  Prodi        : " << dsn[i].getProdi() << endl;
-        cout << "  NIDN         : " << dsn[i].getNidn() << endl;
-        cout << "  Mata Kuliah  : " << dsn[i].getMataKuliah() << endl;
+        cout << i + 1 << "."; 
+        cout << " ID Entitas   : " << dsn[i].getIdEntitas() << endl;
+        cout << "   Nama         : " << dsn[i].getNama() << endl;
+        cout << "   Prodi        : " << dsn[i].getProdi() << endl;
+        cout << "   NIDN         : " << dsn[i].getNidn() << endl;
+        cout << "   Mata Kuliah  : " << dsn[i].getMataKuliah() << endl;
         tampilkanKartu(dsn[i]);
     }
 
-    cout << "\n=== Daftar Petugas Kebersihan (" << ptg.size() << ") ===\n";
+    cout << "=== Daftar Petugas Kebersihan (" << ptg.size() << ") ===\n";
     for (size_t i = 0; i < ptg.size(); i++) {
-        cout << i + 1 << ".\n";
-        cout << "  ID Entitas   : " << ptg[i].getIdEntitas() << endl;
-        cout << "  Nama         : " << ptg[i].getNama() << endl;
-        cout << "  Prodi/Unit   : " << ptg[i].getProdi() << endl;
-        cout << "  ID Petugas   : " << ptg[i].getIdPetugas() << endl;
-        cout << "  Shift Kerja  : " << ptg[i].getShiftKerja() << endl;
+        cout << i + 1 << "."; 
+        cout << " ID Entitas   : " << ptg[i].getIdEntitas() << endl;
+        cout << "   Nama         : " << ptg[i].getNama() << endl;
+        cout << "   Prodi/Unit   : " << ptg[i].getProdi() << endl;
+        cout << "   ID Petugas   : " << ptg[i].getIdPetugas() << endl;
+        cout << "   Shift Kerja  : " << ptg[i].getShiftKerja() << endl;
         tampilkanKartu(ptg[i]);
     }
 }
@@ -148,14 +150,14 @@ int main() {
         cout << "2. Tambah Dosen\n";
         cout << "3. Tambah Petugas Kebersihan\n";
         cout << "4. Tampilkan Semua Data\n";
-        cout << "5. Keluar\n";
+        cout << "0. Keluar\n";
         string pilih = inputTeks("Pilih menu");
 
         if (pilih == "1") tambahMahasiswa(daftarMhs);
         else if (pilih == "2") tambahDosen(daftarDosen);
         else if (pilih == "3") tambahPetugas(daftarPetugas);
         else if (pilih == "4") tampilkanSemua(daftarMhs, daftarDosen, daftarPetugas);
-        else if (pilih == "5") { cout << "Program selesai.\n"; break; }
+        else if (pilih == "0") { cout << "Program selesai.\n"; break; }
         else cout << "Pilihan tidak valid.\n";
     }
     return 0;
