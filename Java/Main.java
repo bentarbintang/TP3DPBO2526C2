@@ -35,11 +35,6 @@ public class Main {
         return new KartuAkses(id, level);
     }
 
-    static void tampilkanKartu(EntitasKampus e) {
-        System.out.println("  ID Kartu     : " + e.getKartu().getIdKartu());
-        System.out.println("  Level Akses  : " + e.getKartu().getLevelAkses());
-    }
-
     static void tambahMahasiswa(ArrayList<Mahasiswa> daftar) {
         System.out.println("\n--- Tambah Mahasiswa ---");
         String id = inputTeks("ID Entitas");
@@ -79,65 +74,69 @@ public class Main {
         System.out.println("Data petugas berhasil ditambahkan.");
     }
 
+    static void tampilkanKartu(EntitasKampus e) {
+        System.out.println("   ID Kartu     : " + e.getKartu().getIdKartu());
+        System.out.println("   Level Akses  : " + e.getKartu().getLevelAkses());
+        System.out.println("\n");
+    }
+
     static void tampilkanSemua(ArrayList<Mahasiswa> mhs, ArrayList<Dosen> dsn, ArrayList<PetugasKebersihan> ptg) {
-        System.out.println("\n=== Daftar Mahasiswa (" + mhs.size() + ") ===");
+        System.out.println("=== Daftar Mahasiswa (" + mhs.size() + ") ===");
         for (int i = 0; i < mhs.size(); i++) {
             Mahasiswa m = mhs.get(i);
-            System.out.println((i + 1) + ".");
-            System.out.println("  ID Entitas   : " + m.getIdEntitas());
-            System.out.println("  Nama         : " + m.getNama());
-            System.out.println("  Prodi        : " + m.getProdi());
-            System.out.println("  NIM          : " + m.getNim());
-            System.out.println("  IPK          : " + m.getIpk());
+            System.out.print((i + 1) + ".");
+            System.out.println(" ID Entitas   : " + m.getIdEntitas());
+            System.out.println("   Nama         : " + m.getNama());
+            System.out.println("   Prodi        : " + m.getProdi());
+            System.out.println("   NIM          : " + m.getNim());
+            System.out.println("   IPK          : " + m.getIpk());
             tampilkanKartu(m);
         }
 
-        System.out.println("\n=== Daftar Dosen (" + dsn.size() + ") ===");
+        System.out.println("=== Daftar Dosen (" + dsn.size() + ") ===");
         for (int i = 0; i < dsn.size(); i++) {
             Dosen d = dsn.get(i);
-            System.out.println((i + 1) + ".");
-            System.out.println("  ID Entitas   : " + d.getIdEntitas());
-            System.out.println("  Nama         : " + d.getNama());
-            System.out.println("  Prodi        : " + d.getProdi());
-            System.out.println("  NIDN         : " + d.getNidn());
-            System.out.println("  Mata Kuliah  : " + d.getMataKuliah());
+            System.out.print((i + 1) + ".");
+            System.out.println(" ID Entitas   : " + d.getIdEntitas());
+            System.out.println("   Nama         : " + d.getNama());
+            System.out.println("   Prodi        : " + d.getProdi());
+            System.out.println("   NIDN         : " + d.getNidn());
+            System.out.println("   Mata Kuliah  : " + d.getMataKuliah());
             tampilkanKartu(d);
         }
 
-        System.out.println("\n=== Daftar Petugas Kebersihan (" + ptg.size() + ") ===");
+        System.out.println("=== Daftar Petugas Kebersihan (" + ptg.size() + ") ===");
         for (int i = 0; i < ptg.size(); i++) {
             PetugasKebersihan p = ptg.get(i);
-            System.out.println((i + 1) + ".");
-            System.out.println("  ID Entitas   : " + p.getIdEntitas());
-            System.out.println("  Nama         : " + p.getNama());
-            System.out.println("  Prodi/Unit   : " + p.getProdi());
-            System.out.println("  ID Petugas   : " + p.getIdPetugas());
-            System.out.println("  Shift Kerja  : " + p.getShiftKerja());
+            System.out.print((i + 1) + ".");
+            System.out.println(" ID Entitas   : " + p.getIdEntitas());
+            System.out.println("   Nama         : " + p.getNama());
+            System.out.println("   Prodi/Unit   : " + p.getProdi());
+            System.out.println("   ID Petugas   : " + p.getIdPetugas());
+            System.out.println("   Shift Kerja  : " + p.getShiftKerja());
             tampilkanKartu(p);
         }
     }
 
     static void isiDataDummy(ArrayList<Mahasiswa> mhs, ArrayList<Dosen> dsn, ArrayList<PetugasKebersihan> ptg) {
-        Mahasiswa m1 = new Mahasiswa("E001", "Budi Santoso", "Informatika", "2023001", 3.75);
-        m1.setKartu(new KartuAkses("K001", "Mahasiswa"));
-        Mahasiswa m2 = new Mahasiswa("E002", "Rina Wulandari", "Sistem Informasi", "2023002", 3.52);
-        m2.setKartu(new KartuAkses("K002", "Mahasiswa"));
-        Mahasiswa m3 = new Mahasiswa("E003", "Andi Pratama", "Teknik Elektro", "2022015", 3.10);
-        m3.setKartu(new KartuAkses("K003", "Mahasiswa"));
-        mhs.add(m1); mhs.add(m2); mhs.add(m3);
+        Mahasiswa m1 = new Mahasiswa("M001", "Budi Santoso", "Informatika", "2023001", 3.75);
+        m1.setKartu(new KartuAkses("KM001", "Mahasiswa"));
+        Mahasiswa m2 = new Mahasiswa("M002", "Rina Wulandari", "Sistem Informasi", "2023002", 3.52);
+        m2.setKartu(new KartuAkses("KM002", "Mahasiswa"));
+        mhs.add(m1); mhs.add(m2);
 
-        Dosen d1 = new Dosen("E004", "Dr. Siti Aminah", "Informatika");
+        Dosen d1 = new Dosen("D001", "Dr. Siti Aminah", "Informatika");
         d1.setNidn("0412345678"); d1.setMataKuliah(3);
-        d1.setKartu(new KartuAkses("K004", "Dosen"));
-        Dosen d2 = new Dosen("E005", "Prof. Hendra Gunawan", "Sistem Informasi");
+        d1.setKartu(new KartuAkses("KD001", "Dosen"));
+        Dosen d2 = new Dosen("D002", "Prof. Hendra Gunawan", "Sistem Informasi");
         d2.setNidn("0423456789"); d2.setMataKuliah(2);
-        d2.setKartu(new KartuAkses("K005", "Dosen"));
+        d2.setKartu(new KartuAkses("KD002", "Dosen"));
         dsn.add(d1); dsn.add(d2);
 
-        PetugasKebersihan p1 = new PetugasKebersihan("E006", "Pak Joko", "Gedung A", "P001", "Pagi");
-        p1.setKartu(new KartuAkses("K006", "Petugas"));
-        PetugasKebersihan p2 = new PetugasKebersihan("E007", "Bu Ningsih", "Gedung B", "P002", "Siang");
-        p2.setKartu(new KartuAkses("K007", "Petugas"));
+        PetugasKebersihan p1 = new PetugasKebersihan("P001", "Pak Joko", "Gedung A", "IP001", "Pagi");
+        p1.setKartu(new KartuAkses("KP001", "Petugas"));
+        PetugasKebersihan p2 = new PetugasKebersihan("P002", "Bu Ningsih", "Gedung B", "IP002", "Siang");
+        p2.setKartu(new KartuAkses("KP002", "Petugas"));
         ptg.add(p1); ptg.add(p2);
     }
 
@@ -148,7 +147,7 @@ public class Main {
         isiDataDummy(daftarMhs, daftarDosen, daftarPetugas);
 
         while (true) {
-            System.out.println("\n===== MENU ENTITAS KAMPUS =====");
+            System.out.println("===== MENU ENTITAS KAMPUS =====");
             System.out.println("1. Tambah Mahasiswa");
             System.out.println("2. Tambah Dosen");
             System.out.println("3. Tambah Petugas Kebersihan");

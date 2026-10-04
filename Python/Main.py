@@ -15,9 +15,6 @@ def input_kartu():
     level = input("Level Akses: ")
     return KartuAkses(id_kartu, level)
 
-def tampilkan_kartu(e):
-    print(f"  ID Kartu     : {e.get_kartu().get_id_kartu()}")
-    print(f"  Level Akses  : {e.get_kartu().get_level_akses()}")
 
 def tambah_mahasiswa(daftar):
     print("\n--- Tambah Mahasiswa ---")
@@ -44,58 +41,58 @@ def tambah_petugas(daftar):
     daftar.append(p)
     print("Data petugas berhasil ditambahkan.")
 
+def tampilkan_kartu(e):
+    print(f"   ID Kartu     : {e.get_kartu().get_id_kartu()}")
+    print(f"   Level Akses  : {e.get_kartu().get_level_akses()}\n")
+
 def tampilkan_semua(mhs, dsn, ptg):
     print(f"\n=== Daftar Mahasiswa ({len(mhs)}) ===")
     for i, m in enumerate(mhs, 1):
-        print(f"{i}.")
-        print(f"  ID Entitas   : {m.get_id_entitas()}")
-        print(f"  Nama         : {m.get_nama()}")
-        print(f"  Prodi        : {m.get_prodi()}")
-        print(f"  NIM          : {m.get_nim()}")
-        print(f"  IPK          : {m.get_ipk()}")
+        print(f"{i}. ID Entitas   : {m.get_id_entitas()}")
+        print(f"   Nama         : {m.get_nama()}")
+        print(f"   Prodi        : {m.get_prodi()}")
+        print(f"   NIM          : {m.get_nim()}")
+        print(f"   IPK          : {m.get_ipk()}")
         tampilkan_kartu(m)
 
-    print(f"\n=== Daftar Dosen ({len(dsn)}) ===")
+    print(f"=== Daftar Dosen ({len(dsn)}) ===")
     for i, d in enumerate(dsn, 1):
-        print(f"{i}.")
-        print(f"  ID Entitas   : {d.get_id_entitas()}")
-        print(f"  Nama         : {d.get_nama()}")
-        print(f"  Prodi        : {d.get_prodi()}")
-        print(f"  NIDN         : {d.get_nidn()}")
-        print(f"  Mata Kuliah  : {d.get_mata_kuliah()}")
+        print(f"{i}. ID Entitas   : {d.get_id_entitas()}")
+        print(f"   Nama         : {d.get_nama()}")
+        print(f"   Prodi        : {d.get_prodi()}")
+        print(f"   NIDN         : {d.get_nidn()}")
+        print(f"   Mata Kuliah  : {d.get_mata_kuliah()}")
         tampilkan_kartu(d)
 
-    print(f"\n=== Daftar Petugas Kebersihan ({len(ptg)}) ===")
+    print(f"=== Daftar Petugas Kebersihan ({len(ptg)}) ===")
     for i, p in enumerate(ptg, 1):
-        print(f"{i}.")
-        print(f"  ID Entitas   : {p.get_id_entitas()}")
-        print(f"  Nama         : {p.get_nama()}")
-        print(f"  Prodi/Unit   : {p.get_prodi()}")
-        print(f"  ID Petugas   : {p.get_id_petugas()}")
-        print(f"  Shift Kerja  : {p.get_shift_kerja()}")
+        print(f"{i}. ID Entitas   : {p.get_id_entitas()}")
+        print(f"   Nama         : {p.get_nama()}")
+        print(f"   Prodi/Unit   : {p.get_prodi()}")
+        print(f"   ID Petugas   : {p.get_id_petugas()}")
+        print(f"   Shift Kerja  : {p.get_shift_kerja()}")
         tampilkan_kartu(p)
 
 def isi_data_dummy(mhs, dsn, ptg):
     for args, level in [
-        (("E001", "Budi Santoso", "Informatika", "2023001", 3.75), "K001"),
-        (("E002", "Rina Wulandari", "Sistem Informasi", "2023002", 3.52), "K002"),
-        (("E003", "Andi Pratama", "Teknik Elektro", "2022015", 3.10), "K003"),
+        (("M001", "Budi Santoso", "Informatika", "2023001", 3.75), "KM001"),
+        (("M002", "Rina Wulandari", "Sistem Informasi", "2023002", 3.52), "KM002"),
     ]:
         m = Mahasiswa(*args)
         m.set_kartu(KartuAkses(level, "Mahasiswa"))
         mhs.append(m)
 
     for args, kartu in [
-        (("E004", "Dr. Siti Aminah", "Informatika", "0412345678", 3), "K004"),
-        (("E005", "Prof. Hendra Gunawan", "Sistem Informasi", "0423456789", 2), "K005"),
+        (("D001", "Dr. Siti Aminah", "Informatika", "0412345678", 3), "KD001"),
+        (("D002", "Prof. Hendra Gunawan", "Sistem Informasi", "0423456789", 2), "KD002"),
     ]:
         d = Dosen(*args)
         d.set_kartu(KartuAkses(kartu, "Dosen"))
         dsn.append(d)
 
     for args, kartu in [
-        (("E006", "Pak Joko", "Gedung A", "P001", "Pagi"), "K006"),
-        (("E007", "Bu Ningsih", "Gedung B", "P002", "Siang"), "K007"),
+        (("P001", "Pak Joko", "Gedung A", "IP001", "Pagi"), "KP001"),
+        (("P002", "Bu Ningsih", "Gedung B", "IP002", "Siang"), "KP002"),
     ]:
         p = PetugasKebersihan(*args)
         p.set_kartu(KartuAkses(kartu, "Petugas"))
@@ -106,7 +103,7 @@ def main():
     isi_data_dummy(daftar_mhs, daftar_dosen, daftar_petugas)
 
     while True:
-        print("\n===== MENU ENTITAS KAMPUS =====")
+        print("===== MENU ENTITAS KAMPUS =====")
         print("1. Tambah Mahasiswa")
         print("2. Tambah Dosen")
         print("3. Tambah Petugas Kebersihan")

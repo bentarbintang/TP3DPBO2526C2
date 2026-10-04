@@ -79,6 +79,40 @@ void tampilkanKartu(EntitasKampus &e) {
     cout << "\n";
 }
 
+void tampilkanMahas(vector<Mahasiswa> &mhs, vector<Dosen> &dsn, vector<PetugasKebersihan> &ptg) {
+    cout << "=== Daftar Mahasiswa (" << mhs.size() << ") ===\n";
+    for (size_t i = 0; i < mhs.size(); i++) {
+        cout << i + 1 << "."; 
+        cout << " ID Entitas   : " << mhs[i].getIdEntitas() << endl;
+        cout << "   Nama         : " << mhs[i].getNama() << endl;
+        cout << "   Prodi        : " << mhs[i].getProdi() << endl;
+        cout << "   NIM          : " << mhs[i].getNim() << endl;
+        cout << "   IPK          : " << mhs[i].getIpk() << endl;
+        tampilkanKartu(mhs[i]);
+    }
+
+    cout << "=== Daftar Dosen (" << dsn.size() << ") ===\n";
+    for (size_t i = 0; i < dsn.size(); i++) {
+        cout << i + 1 << "."; 
+        cout << " ID Entitas   : " << dsn[i].getIdEntitas() << endl;
+        cout << "   Nama         : " << dsn[i].getNama() << endl;
+        cout << "   Prodi        : " << dsn[i].getProdi() << endl;
+        cout << "   NIDN         : " << dsn[i].getNidn() << endl;
+        cout << "   Mata Kuliah  : " << dsn[i].getMataKuliah() << endl;
+        tampilkanKartu(dsn[i]);
+    }
+
+    cout << "=== Daftar Petugas Kebersihan (" << ptg.size() << ") ===\n";
+    for (size_t i = 0; i < ptg.size(); i++) {
+        cout << i + 1 << "."; 
+        cout << " ID Entitas   : " << ptg[i].getIdEntitas() << endl;
+        cout << "   Nama         : " << ptg[i].getNama() << endl;
+        cout << "   Prodi/Unit   : " << ptg[i].getProdi() << endl;
+        cout << "   ID Petugas   : " << ptg[i].getIdPetugas() << endl;
+        cout << "   Shift Kerja  : " << ptg[i].getShiftKerja() << endl;
+        tampilkanKartu(ptg[i]);
+    }
+}
 void tampilkanSemua(vector<Mahasiswa> &mhs, vector<Dosen> &dsn, vector<PetugasKebersihan> &ptg) {
     cout << "=== Daftar Mahasiswa (" << mhs.size() << ") ===\n";
     for (size_t i = 0; i < mhs.size(); i++) {
@@ -115,26 +149,24 @@ void tampilkanSemua(vector<Mahasiswa> &mhs, vector<Dosen> &dsn, vector<PetugasKe
 }
 
 void isiDataDummy(vector<Mahasiswa> &mhs, vector<Dosen> &dsn, vector<PetugasKebersihan> &ptg) {
-    Mahasiswa m1("E001", "Budi Santoso", "Informatika", "2023001", 3.75);
-    m1.setKartu(KartuAkses("K001", "Mahasiswa"));
-    Mahasiswa m2("E002", "Rina Wulandari", "Sistem Informasi", "2023002", 3.52);
-    m2.setKartu(KartuAkses("K002", "Mahasiswa"));
-    Mahasiswa m3("E003", "Andi Pratama", "Teknik Elektro", "2022015", 3.10);
-    m3.setKartu(KartuAkses("K003", "Mahasiswa"));
-    mhs.push_back(m1); mhs.push_back(m2); mhs.push_back(m3);
+    Mahasiswa m1("M001", "Budi Santoso", "Informatika", "2023001", 3.75);
+    m1.setKartu(KartuAkses("KM001", "Mahasiswa"));
+    Mahasiswa m2("M002", "Rina Wulandari", "Sistem Informasi", "2023002", 3.52);
+    m2.setKartu(KartuAkses("KM002", "Mahasiswa"));
+    mhs.push_back(m1); mhs.push_back(m2);
 
-    Dosen d1("E004", "Dr. Siti Aminah", "Informatika");
+    Dosen d1("D004", "Dr. Siti Aminah", "Informatika");
     d1.setNidn("0412345678"); d1.setMataKuliah(3);
-    d1.setKartu(KartuAkses("K004", "Dosen"));
-    Dosen d2("E005", "Prof. Hendra Gunawan", "Sistem Informasi");
+    d1.setKartu(KartuAkses("KD004", "Dosen"));
+    Dosen d2("D005", "Prof. Hendra Gunawan", "Sistem Informasi");
     d2.setNidn("0423456789"); d2.setMataKuliah(2);
-    d2.setKartu(KartuAkses("K005", "Dosen"));
+    d2.setKartu(KartuAkses("KD005", "Dosen"));
     dsn.push_back(d1); dsn.push_back(d2);
 
-    PetugasKebersihan p1("E006", "Pak Joko", "Gedung A", "P001", "Pagi");
-    p1.setKartu(KartuAkses("K006", "Petugas"));
-    PetugasKebersihan p2("E007", "Bu Ningsih", "Gedung B", "P002", "Siang");
-    p2.setKartu(KartuAkses("K007", "Petugas"));
+    PetugasKebersihan p1("P006", "Pak Joko", "Gedung A", "IP001", "Pagi");
+    p1.setKartu(KartuAkses("KP006", "Petugas"));
+    PetugasKebersihan p2("P007", "Bu Ningsih", "Gedung B", "IP002", "Siang");
+    p2.setKartu(KartuAkses("KP007", "Petugas"));
     ptg.push_back(p1); ptg.push_back(p2);
 }
 
