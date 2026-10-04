@@ -269,14 +269,7 @@ python Main.py
 
 ---
 
-## 6. Contoh Tampilan
-
-```
-    1. Bahasa C++
-```
-<img width="368" height="234" alt="image" src="https://github.com/user-attachments/assets/17b4fceb-9fab-4122-9f43-9ebf069d3c45" />
-
-## 7. Struktur Folder
+## 6. Struktur Folder
 
 ```
 TP3DPBO2526C2/
@@ -285,3 +278,26 @@ TP3DPBO2526C2/
 ├── Python/   (file .py dengan struktur kelas yang sama)
 └── README.md
 ```
+
+## 7. Contoh Tampilan
+
+```
+    1. Bahasa C++
+```
+
+```
+Tampilan sebelum menambahkan data
+```
+<img width="368" height="234" alt="image" src="https://github.com/user-attachments/assets/17b4fceb-9fab-4122-9f43-9ebf069d3c45" />
+
+```
+Tampilan menambahkan data, contoh ketika kita ingin menambahkan data mahasiswa
+```
+<img width="230" height="158" alt="image" src="https://github.com/user-attachments/assets/e3b08586-6138-4d62-b945-5967e2ffbc74" />
+
+```
+Tampilan setelah menambahkan data
+```
+<img width="252" height="285" alt="image" src="https://github.com/user-attachments/assets/831429b5-3ee0-49bc-8f4c-bbe5e22a6624" />
+
+
