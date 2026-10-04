@@ -300,7 +300,7 @@ TP3DPBO2526C2/
 └── README.md                  
 ```
 
-## 7. Contoh Tampilan
+## 7. Dokumentasi
 
 ```
     1. Bahasa C++
