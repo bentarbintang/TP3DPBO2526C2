@@ -273,10 +273,31 @@ python Main.py
 
 ```
 TP3DPBO2526C2/
-├── Cpp/      (Main, EntitasKampus, KartuAkses, Mahasiswa, Dosen, PetugasKebersihan)
-├── Java/     (file .java dengan struktur kelas yang sama)
-├── Python/   (file .py dengan struktur kelas yang sama)
-└── README.md
+├── Cpp/                   
+│   ├── Dosen.cpp                
+│   ├── EntitasKampus.cpp        
+│   ├── KartuAkses.cpp           
+│   ├── Mahasiswa.cpp            
+│   ├── Main.cpp                 
+│   └── PetugasKebersihan.cpp    
+│
+├── Java/
+│   ├── Dosen.java                           
+│   ├── EntitasKampus.java            
+│   ├── KartuAkses.java                  
+│   ├── Mahasiswa.java                 
+│   ├── Main.java                              
+│   ├── PetugasKebersihan.java   
+│
+├── Python/
+│   ├── Dosen.py                 
+│   ├── EntitasKampus.py        
+│   ├── KartuAkses.py            
+│   ├── Mahasiswa.py            
+│   ├── Main.py                  
+│   └── PetugasKebersihan.py    
+│
+└── README.md                  
 ```
 
 ## 7. Contoh Tampilan
@@ -286,18 +307,56 @@ TP3DPBO2526C2/
 ```
 
 ```
-Tampilan sebelum menambahkan data
+    Tampilan sebelum menambahkan data
 ```
 <img width="368" height="234" alt="image" src="https://github.com/user-attachments/assets/17b4fceb-9fab-4122-9f43-9ebf069d3c45" />
 
 ```
-Tampilan menambahkan data, contoh ketika kita ingin menambahkan data mahasiswa
+    Tampilan menambahkan data, contoh ketika kita ingin menambahkan data mahasiswa
 ```
 <img width="230" height="158" alt="image" src="https://github.com/user-attachments/assets/e3b08586-6138-4d62-b945-5967e2ffbc74" />
 
 ```
-Tampilan setelah menambahkan data
+    Tampilan setelah menambahkan data
 ```
 <img width="252" height="285" alt="image" src="https://github.com/user-attachments/assets/831429b5-3ee0-49bc-8f4c-bbe5e22a6624" />
+
+```
+    2. Bahasa Python
+```
+
+```
+    Tampilan sebelum menambahkan data
+```
+<img width="326" height="230" alt="image" src="https://github.com/user-attachments/assets/d06b27f8-333c-4319-ad0d-969425120c35" />
+
+```
+    Tampilan menambahkan data, contoh ketika kita ingin menambahkan data mahasiswa
+```
+<img width="272" height="154" alt="image" src="https://github.com/user-attachments/assets/8ff31f9e-e3dc-44fc-9c25-e9c55af3a6c0" />
+
+```
+    Tampilan setelah menambahkan data
+```
+<img width="269" height="295" alt="image" src="https://github.com/user-attachments/assets/1522a791-1bf1-4b47-b283-d23e8cb603f5" />
+
+```
+    3. Bahasa Java
+```
+
+```
+    Tampilan sebelum menambahkan data
+```
+<img width="314" height="257" alt="image" src="https://github.com/user-attachments/assets/136c30de-63d5-4481-bb07-df658d2bc4a8" />
+
+```
+    Tampilan menambahkan data, contoh ketika kita ingin menambahkan data mahasiswa
+```
+<img width="266" height="157" alt="image" src="https://github.com/user-attachments/assets/b98b5346-e7d7-4798-8f4f-3e5298d351f2" />
+
+```
+    Tampilan setelah menambahkan data
+```
+<img width="281" height="303" alt="image" src="https://github.com/user-attachments/assets/b292a399-6e57-4cf2-aa10-c47ba89dccb4" />
 
 
