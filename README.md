@@ -273,31 +273,37 @@ python Main.py
 
 ```
 TP3DPBO2526C2/
-├── Cpp/                   
-│   ├── Dosen.cpp                
-│   ├── EntitasKampus.cpp        
-│   ├── KartuAkses.cpp           
-│   ├── Mahasiswa.cpp            
-│   ├── Main.cpp                 
-│   └── PetugasKebersihan.cpp    
+├── Cpp/
+│   ├── Dokumentasi/             
+│   └── Program/                
+│       ├── Dosen.cpp                
+│       ├── EntitasKampus.cpp        
+│       ├── KartuAkses.cpp           
+│       ├── Mahasiswa.cpp            
+│       ├── Main.cpp                 
+│       └── PetugasKebersihan.cpp    
 │
 ├── Java/
-│   ├── Dosen.java                           
-│   ├── EntitasKampus.java            
-│   ├── KartuAkses.java                  
-│   ├── Mahasiswa.java                 
-│   ├── Main.java                              
-│   ├── PetugasKebersihan.java   
+│   ├── Dokumentasi/             
+│   └── Program/
+│       ├── Dosen.java                      
+│       ├── EntitasKampus.java         
+│       ├── KartuAkses.java                 
+│       ├── Mahasiswa.java                  
+│       ├── Main.java                             
+│       └── PetugasKebersihan.java
 │
 ├── Python/
-│   ├── Dosen.py                 
-│   ├── EntitasKampus.py        
-│   ├── KartuAkses.py            
-│   ├── Mahasiswa.py            
-│   ├── Main.py                  
-│   └── PetugasKebersihan.py    
+│   ├── Dokumentasi/             
+│   └── Program/
+│       ├── Dosen.py                 
+│       ├── EntitasKampus.py         
+│       ├── KartuAkses.py            
+│       ├── Mahasiswa.py             
+│       ├── Main.py                  
+│       └── PetugasKebersihan.py    
 │
-└── README.md                  
+└── README.md                       
 ```
 
 ## 7. Dokumentasi
