@@ -250,15 +250,14 @@ flowchart TD
 
 **C++**
 ```bash
-cd Cpp
-g++ Main.cpp -o main
-./main
+cd Cpp (jika posisi belum pada directory bahasa)
+c++ Main.cpp -o a.exe && a
 ```
 
 **Java**
 ```bash
 cd Java
-javac Main.java
+javac *.java
 java Main
 ```
 
@@ -273,23 +272,9 @@ python Main.py
 ## 6. Contoh Tampilan
 
 ```
-===== MENU ENTITAS KAMPUS =====
-1. Tambah Mahasiswa
-2. Tambah Dosen
-3. Tambah Petugas Kebersihan
-4. Tampilkan Semua Data
-0. Keluar
-Pilih menu: 1
-
---- Tambah Mahasiswa ---
-ID Entitas: M003
-Nama: Bintang
-Prodi: ilmu komputer
-NIM: 2509865
-ID Kartu: KM003
-Level Akses: Mahasiswa
-Data mahasiswa berhasil ditambahkan.
+    1. Bahasa C++
 ```
+<img width="368" height="234" alt="image" src="https://github.com/user-attachments/assets/17b4fceb-9fab-4122-9f43-9ebf069d3c45" />
 
 ## 7. Struktur Folder
 
